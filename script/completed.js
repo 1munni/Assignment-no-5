@@ -45,11 +45,11 @@ document.getElementById('discover')
     window.location.href="../faq.html"
 })
 
-// back-to-desk
-document.getElementById('deskBack')
+document.getElementById('changeColor')
 .addEventListener('click',function(){
-    window.location.href="../index.html"
-   
+    let colors = ["red","gray", "blue", "green","teal", "purple", "yellow","tomato", "orange", "pink"];
+    let randomIndex = Math.floor(Math.random() * colors.length);
+    document.body.style.backgroundColor = colors[randomIndex];
 })
 
 
