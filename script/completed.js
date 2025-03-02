@@ -43,7 +43,7 @@ document.getElementById('clear-history')
 // discover-click
 document.getElementById('discover')
 .addEventListener('click',function(){
-    window.location.href="../faq.html"
+    window.location.href="/Assignment-no-5/faq.html"
 })
  
 // date function
