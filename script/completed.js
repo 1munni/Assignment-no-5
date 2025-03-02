@@ -1,10 +1,16 @@
 const cardButton= document.querySelectorAll('.btn-primary')
 
+let clickCount = 0;
 for(let i=0; i<cardButton.length; i++){
 const completedButton= cardButton[i];
 completedButton.addEventListener('click',function(event){
     event.preventDefault();
     alert('Board Updated Successfully');
+
+    clickCount++;
+  if(clickCount===cardButton.length){
+    alert('congratulation you have completed all the task')
+  }
   
     completedButton.classList.remove('btn-primary');
     completedButton.classList.add('btn-disabled');
