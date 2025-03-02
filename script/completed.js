@@ -5,7 +5,7 @@ const completedButton= cardButton[i];
 completedButton.addEventListener('click',function(event){
     event.preventDefault();
     alert('Board Updated Successfully');
- 
+  
     completedButton.classList.remove('btn-primary');
     completedButton.classList.add('btn-disabled');
 
@@ -19,6 +19,7 @@ const assignNumber2 = document.getElementById("assign-number2").innerText;
 const convertedAssignNumber2=parseInt(assignNumber2);
 document.getElementById("assign-number2").innerText=
 convertedAssignNumber2+1;
+
 
 // transaction-section
 const container=document.getElementById('transection-container')
@@ -44,7 +45,17 @@ document.getElementById('discover')
 .addEventListener('click',function(){
     window.location.href="../faq.html"
 })
+ 
+// date function
+document.getElementById('date')
+.addEventListener('click',function() {
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString();
+    document.getElementById("date").textContent = "Current Date: " + formattedDate;
+})
 
+
+// color-function
 document.getElementById('changeColor')
 .addEventListener('click',function(){
     let colors = ["red","gray", "blue", "green","teal", "purple", "yellow","tomato", "orange", "pink"];
